@@ -13,7 +13,7 @@ export const Navbar = () => {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'start',
-        padding: '0 40px 0px 20px',
+        padding: '0 30px 0px 10px',
         backgroundColor: theme?.colors.gray900.value
     }}>
 
