@@ -2,6 +2,7 @@ import { FC, useState } from 'react';
 
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { Button, Card, Container, Grid, Image, Text } from '@nextui-org/react';
+import { Heart, TickSquare } from 'react-iconly';
 
 import confetti from 'canvas-confetti';
 
@@ -56,14 +57,23 @@ const PokemonByNamePage: FC<Props> = ({ pokemon }) => {
                 <Grid xs={ 12 } sm={ 8 }>
                     <Card>
                         <Card.Header css={{ display: 'flex', justifyContent: 'space-between' }}>
-                            <Text h1 transform='capitalize'>{ pokemon.name }</Text>
-                            <Button
+                            <Text h2 transform='capitalize'>{ pokemon.name }</Text>
+                            {/* <Button
                                 color="gradient"
                                 ghost={ !isInFavorites }
                                 onClick={ onToggleFavorite }
                             >
                                 { isInFavorites ? 'En mis favoritos' : 'Agregar a favoritos' }
-                            </Button>
+                            </Button> */}
+                            <Button
+                                auto color="error"
+                                icon={
+                                    isInFavorites 
+                                    ? <TickSquare set="bold" primaryColor="white"/>
+                                    : <Heart primaryColor="white" filled />
+                                }
+                                onClick={ onToggleFavorite }
+                            />
                         </Card.Header>
                         <Card.Body>
                             <Text size={ 30 }>Sprites:</Text>
