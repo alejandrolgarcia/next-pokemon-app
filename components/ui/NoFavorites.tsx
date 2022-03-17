@@ -14,6 +14,7 @@ export const NoFavorites = () => {
             <Text h2>No hay pokémons en favoritos!</Text>
             <Image
                 src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg'
+                alt='no-image'
                 width={ 250 }
                 height={ 250 }
                 css={{
